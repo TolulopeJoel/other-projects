@@ -1,0 +1,104 @@
+body {
+    background: #f6f6f6;
+    font-family: Oswald;
+}
+
+section {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+  }
+
+/*  =================================================
+                CHARACTERS
+=====================================================*/
+
+.characters {
+    gap: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.characters img {
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.characters img:hover {
+    box-shadow: 0 4px 8px 0 rgba(132, 132, 129,0.2), 0 6px 20px 0 rgba(132, 132, 129,0.19);
+}
+
+/*  =================================================
+                NAME SECTION
+=====================================================*/
+
+.names {
+    display: flex;
+    justify-content: center;
+}
+
+.names div {
+    text-align: center;
+    font-size: 58px;
+    width: 33.3%;
+}
+
+
+/*  =================================================
+                    PLAY SECTION
+=====================================================*/
+
+.player-images {
+    color: #043040;
+    font-size: 28PX;
+    border: 0;
+    text-align: center;
+    max-width: 33.33%;
+    
+}
+
+.player-images img, .versus .vs {
+    width: 150px;
+    padding: 50px;
+    height: 150px;
+    border-radius: 30px;
+}
+
+.player-images img {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(132, 132, 129,0.2), 0 6px 20px 0 rgba(132, 132, 129,0.19);
+}
+
+.versus {
+    color: #043040;
+    text-align: center;
+    font-family: Oswald;
+}
+
+.versus .vs {
+    vertical-align: middle;
+    line-height: 250px;
+    margin-bottom: 0;
+    font-size: 98px;
+}
+
+
+.play-section {
+    margin-top: 100px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+
+
+button {
+    border: none;
+    background: none;
+}

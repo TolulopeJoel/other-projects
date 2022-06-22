@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="style.css">
+    <title>RPS</title>
+</head>
+
+<body onload="play();playerName = Math.floor(Math.random() * players.length);document.getElementById('otherPlayer').innerHTML = players[playerName].toUpperCase()">
+
+    <section>
+
+        <div class="characters">
+            <button id="rockButton"><img src="images/rock.svg" alt=""></button>
+            <button id="paperButton"><img src="images/paper.svg" alt=""></button>
+            <button id="scissorsButton"><img src="images/scissors.svg" alt=""></button>
+        </div>
+
+        <div class="play-section">
+            <div class="player-images">
+                <h1>YOU</h1>
+                <img src="images/white.jpg" alt="" id="playerImage">
+                <h1 id="playerScore">0</h1>
+            </div>
+
+            <div class="versus">
+                <!-- <h2>.</h2> -->
+                <h1 class="vs">VS</h1>
+            </div>
+
+            <div class="player-images">
+                <h1 id="otherPlayer">CPU</h1>
+                <img src="images/white.jpg" alt="" id="computerImage">
+                <h1 id="computerScore">0</h1>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+    <script src="players.js"></script>
+</body>
+
+</html>
