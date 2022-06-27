@@ -10,7 +10,9 @@
     <title>RPS</title>
 </head>
 
-<body onload="play();">
+<body onload="play();
+playerName = Math.floor(Math.random() * players.length);
+document.body.onload = document.getElementById('otherPlayer').innerHTML = players[playerName].toUpperCase();">
 
     <section>
 
@@ -41,8 +43,8 @@
 
     </section>
 
-    <script src="script.js"></script>
-    <script src="players.js"></script>
+    <script src="./script.js"></script>
+    <script src="./players.js"></script>
 </body>
 
 </html>
