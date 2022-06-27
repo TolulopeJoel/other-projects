@@ -1,6 +1,6 @@
 body {
     background: #f6f6f6;
-    font-family: Oswald;
+    font-family: Oswald, sans-serif;
 }
 
 section {
@@ -79,7 +79,6 @@ section {
 .versus {
     color: #043040;
     text-align: center;
-    font-family: Oswald;
 }
 
 .versus .vs {
