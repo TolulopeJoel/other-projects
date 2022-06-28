@@ -24,7 +24,7 @@ git clone [https://github.com/lordghostx/lordghostx.github.io](https://github.co
 
 ## Authors
 
-* [**LordGhostX**](https://github.com/toluisjoel)
+* [**Tolu Joel**](https://github.com/toluisjoel)
 
 ## License
 
