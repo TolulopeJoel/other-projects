@@ -13,7 +13,7 @@ You can view the project on [Github Pages](https://toluisjoel.github.io/rock-pap
 ### Installing
 
 ```
-git clone [https://github.com/lordghostx/lordghostx.github.io](https://github.com/toluisjoel/rock-paper-scissors.git)
+git clone https://github.com/toluisjoel/rock-paper-scissors.git
 ```
 
 ## Built With
