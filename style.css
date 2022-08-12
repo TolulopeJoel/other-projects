@@ -1,0 +1,42 @@
+body {
+    background: #dfdfdf;
+    font-family: Oswald, sans-serif;
+}
+
+.characters img {
+    width: 80px;
+    height: 80px;
+    transition: 0.3s ease-in-out;
+}
+
+.characters img:hover {
+    box-shadow: 0 4px 8px 0 rgba(132, 132, 129, 0.2), 0 6px 20px 0 rgba(132, 132, 129, 0.19);
+}
+
+.player-images {
+    color: #043040;
+    font-size: 28PX;
+    text-align: center;
+}
+
+.player-images img{
+    width: 150px;
+    height: 150px;
+}
+
+.versus {
+    display: none;
+}
+
+@media only screen and (min-width: 992px) {
+    section {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .versus {
+        display: block;
+    }
+}
