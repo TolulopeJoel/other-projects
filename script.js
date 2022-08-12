@@ -2,6 +2,7 @@ function calcRps(move) {
     let gameCharacters = { 'p': 'paper', 'r': 'rock', 's': 'scissors' },
         chrValues = Object.values(gameCharacters),
         computerMove = chrValues[Math.floor(Math.random() * chrValues.length)];  // Get random character
+        
     var computerScore = Number(document.getElementById('computerScore').innerHTML),
         playerScore = Number(document.getElementById('playerScore').innerHTML);
     document.getElementById('computerImage').src = `images/${computerMove}.svg`;
