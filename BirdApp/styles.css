@@ -1,0 +1,172 @@
+* {
+    color: white;
+    font-size: 100%;
+    background: #1e1e1e;
+    box-sizing:border-box;
+    font-family: verdana, Tahoma, Helvetica, sans-serif;
+}
+
+section{padding-top: 70px;}
+
+h1{font-size: 32px;}
+
+h2{font-size: 28px;}
+
+h1, h2 i{font-family: Georgia, serif;}
+
+p{
+    text-transform: capitalize;
+    justify-content:center;
+    word-spacing: 2px;
+    line-height: 2.3;
+}
+
+footer {
+    text-align: center;
+    padding-top:20px;
+}
+
+footer a:link{
+    width: 100%;
+    text-decoration: none;
+    padding:5px;
+}
+
+.icons{font-size: 34px;}
+
+.icons i{
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* ----------------------------------------------------------------
+                            HOME PAGE
+---------------------------------------------------------------- */
+#home{text-align: center;}
+
+nav ul{
+    text-align: center;
+    padding-top: 0;
+    margin: 0;
+}
+
+nav li{
+    display: block;
+    padding-bottom: 10px;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+nav li a{
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover{border-bottom: 1px solid;}
+
+.home-page p{
+    padding: 30px 0;
+    max-width: 700px;
+    text-align: left;
+    margin: auto;
+}
+
+.home-page img{
+    width: 90%;
+    height: 100%;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 20px;
+    border-style: dotted;
+}
+
+th{background-color:hotpink;}
+
+@media only screen and (min-width: 1024px) {
+    .home-page img{
+        margin: auto;
+        display: block;
+        width: 700px;
+        height:437px;
+    } 
+
+    nav ul{padding-top: 40px;}
+    
+    nav li{
+        padding: 20px;
+        display: inline;
+    }
+}
+
+
+/* ----------------------------------------------------------------
+                            ABOUT PAGE
+---------------------------------------------------------------- */
+#about-birds-page {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    grid-template-columns: auto;
+}
+
+.bird-card {
+    box-shadow: 0 4px 8px 0 rgba(132, 132, 129,0.2), 0 6px 20px 0 rgba(132, 132, 129,0.19);
+    border: 1px solid rgba(132, 132, 129, 0.19);
+}
+
+.bird-card img {width: 100%;}
+
+.bird-card-description {padding: 20px;}
+
+@media only screen and (min-width: 768px) {
+    #about-birds-page {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #about-birds-page {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    #about-birds-page {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+
+/* ----------------------------------------------------------------
+                            CONTACT PAGE
+---------------------------------------------------------------- */
+#contact section {
+    display:grid;
+    justify-content: center;
+}
+
+form{
+    display:grid;
+    gap: 10px;
+    padding: 100px;
+    margin-top: 100px;
+    color: black;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(132, 132, 129,0.2), 0 6px 20px 0 rgba(132, 132, 129,0.19);
+    border: 1px solid rgba(132, 132, 129, 0.19);
+}
+
+input {
+    width: 300px;
+    color: black;
+    margin : 30px 0 30px 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background: white;
+}
+  
+input[type=submit]:hover {background-color: rgb(37, 174, 37);}

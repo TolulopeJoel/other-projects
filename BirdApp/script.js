@@ -1,0 +1,1 @@
+document.getElementById("maddd").innerHTML = 74 + 89;
