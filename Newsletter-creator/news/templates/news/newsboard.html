@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h3><a href="{% url 'news:post_list' %}">Post list</a></h3>
+    <h3><a href="{% url 'news:create_post' %}">Create Post</a></h3>
+    <br>
+
+    <h3><a href="{% url 'news:letter_list' %}">NewsLetter list</a></h3>
+    <h3><a href="{% url 'news:create_letter' %}">Create News Letter</a></h3>
+    <h3><a href="{% url 'news:previous_newsletters' %}">Previous News Letter</a></h3>
+    <br>
+    <h3><a href="{% url 'news:metrics' %}">Metrics</a></h3>
+    <h3><a href="{% url 'account:logout' %}">logout</a></h3>
+{% endblock %}

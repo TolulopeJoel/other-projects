@@ -1,0 +1,6 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    leaving so soon {{ unsubcriber.first_name }} 🙁?
+    <p><a href="{% url 'subscribers:add' %}">Click this link to be added back to our list</a></p>
+{% endblock %}

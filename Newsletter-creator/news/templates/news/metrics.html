@@ -1,0 +1,119 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between">
+  <div style="max-width: 500px; margin:0">
+    <canvas id="users"></canvas>
+  </div>
+
+  <div style="max-width: 500px; margin:0">
+    <canvas id="emails"></canvas>
+  </div>
+</div>
+
+<div>
+  <canvas id="months"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const users_ctx = document.getElementById('users');
+  new Chart(users_ctx, {
+    type: 'pie',
+    data: {
+      labels: ["Subscribers", "Unsubscribers"],
+      datasets: [{
+        label: "Percentage",
+        backgroundColor: [
+          "#20c997",
+          'rgb(255, 99, 132)',
+        ],
+        data: [Number("{{ subscribers_percent }}"), Number("{{ unsubscribers_percent }}")]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+  });
+
+  const email_ctx = document.getElementById('emails');
+  new Chart(email_ctx, {
+    type: 'pie',
+    responsive: true,
+    data: {
+      labels: ["Read Emails", "Unread Emails"],
+      datasets: [{
+        label: "Percentage",
+        backgroundColor: [
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)'
+        ],
+        data: [Number("{{ read_emails_percent }}"), Number("{{ unread_emails_percent }}")]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+  });
+
+  const months_ctx = document.getElementById('months');
+  new Chart(months_ctx, {
+    type: 'bar',
+    responsive: true,
+    data: {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+      datasets: [{
+        borderWidth: 1,
+        label: "Nuumber of subscribers",
+        data: [
+          Number('{{ monthly_subscribers.january | length }}'),
+          Number('{{ monthly_subscribers.february | length }}'),
+          Number('{{ monthly_subscribers.march | length }}'),
+          Number('{{ monthly_subscribers.april | length }}'),
+          Number('{{ monthly_subscribers.may | length }}'),
+          Number('{{ monthly_subscribers.june | length }}'),
+          Number('{{ monthly_subscribers.july | length }}'),
+          Number('{{ monthly_subscribers.august | length }}'),
+          Number('{{ monthly_subscribers.september | length }}'),
+          Number('{{ monthly_subscribers.october | length }}'),
+          Number('{{ monthly_subscribers.november | length }}'),
+          Number('{{ monthly_subscribers.december | length }}'),
+        ],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(255, 159, 64, 0.2)',
+          'rgba(255, 205, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(201, 203, 207, 0.2)'
+        ],
+        borderColor: [
+          'rgb(255, 99, 132)',
+          'rgb(255, 159, 64)',
+          'rgb(255, 205, 86)',
+          'rgb(75, 192, 192)',
+          'rgb(54, 162, 235)',
+          'rgb(153, 102, 255)',
+          'rgb(201, 203, 207)'
+        ],
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+  });
+
+</script>
+{% endblock%}

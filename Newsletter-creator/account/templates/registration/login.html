@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% block title %}Login Comrade{% endblock %}
+
+{% block content %}
+
+<form action="{%  url 'account:login' %}" method="post">
+    <h1>Log In</h1>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="next" value="{{ next }}">
+    <p><input type="submit" value="Login"></p>
+</form>
+{% endblock %}
+
+<!--------- div class="social">
+    <ul>
+    <li class="facebook">
+        <a href="{% url 'begin' 'facebook' %}">Sign in withFacebook</a>
+        </li>
+    </ul>
+</!div ---------------->

@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% block title %}Edit your account{% endblock %}
+{% block footer %}<!---->{% endblock %}
+{% block content %}
+<div class="profile-edit-form">
+    <form method="post" enctype="multipart/form-data" id="mc-form" class="mc-form">
+        <h1>Edit your account</h1>
+        {{ user_form }}{{ profile_form }}
+        {% csrf_token %}
+        <button><a href="{% url 'account:password_change' %}">Change Password</a></button>
+    </div>
+        <p><input type="submit" value="Save changes" class="btn--small btn--primary"></p>
+    </form>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "main.html" %}ß
+{% load static %}
+{% block title %} Dashboard{% endblock %}
+{% block footer %}<!---->{% endblock %}
+
+{% block content %}
+
+<h1 style="font-family: Inter, sans-serif;">PROFILE</h1>
+
+<div class="row u-add-half-bottom">
+    <div class="column lg-6 tab-12">
+        <figure class="profile-photo" style="display: flex; justify-content: center; align-items: center;">
+            <img src="{{request.user.profile.profile_picture.url}}" alt="profile-photo"class="avatar">
+        </figure>
+
+        <h2 style="display: flex; justify-content: center; align-items: center;"><b>@{{request.user.username}}</b></h2>
+        <span style="display: flex; justify-content: center; align-items: center;"><b>{{request.user.first_name}} {{request.user.last_name}}</b></span>
+        <p style="display: flex; justify-content: center; align-items: center;">{{request.user.profile.bio}}</p>
+    </div>
+    <div class="column lg-6 tab-12">
+        <p><a class='btn btn--stroke u-fullwidth' href="{% url 'account:edit' %}">edit your profile</a>
+        <a class='btn btn--stroke u-fullwidth' href="{% url 'blog:create_post' %}">Create Post</a>
+        <a class='btn btn--stroke u-fullwidth' href="{% url 'account:post_manager' %}">Manage Posts</a>
+        <a class='btn btn--stroke u-fullwidth' href="{% url 'account:delete_account' request.user.pk %}">Delete account</a>
+        <a class='btn btn--stroke u-fullwidth' href="">Invite a friend</a></p>
+    </div>
+</div>
+
+{% endblock %}

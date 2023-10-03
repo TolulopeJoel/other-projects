@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <form action="" method="post">
+        <h1 class="display-4 my-5">Create letter</h1>
+        <h5 class="text-danger">Only validated posts are shown</h5>
+        <h5 class="text-danger">Posts are manually validated by Admins</h5>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-success" type="submit">Add letter!</button>
+    </form>
+{% endblock %}

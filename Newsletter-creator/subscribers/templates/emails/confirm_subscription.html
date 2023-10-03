@@ -1,0 +1,24 @@
+{% autoescape off %}
+<h3>Hello {{ subscriber.first_name }}!</h3>
+
+<p>
+Thanks for subscribing to our <b>news</b>-letter. <br>
+Click this link to confirm your <a href="{{ confirmation_url }}">subscription</a>
+</p>
+
+<p>
+We will be sending you latest <i>humores</i> thrice a week because we hate spamming <br>
+as much as you do 🫂, you can leave a comment under our <a href="https://twitter.com/the_humore/">tweet</a> if you would like<br>
+our emails to be more frequent 😉. <br><br>
+<i>ps: <b>"humore"</b> is what we call a news</i>
+</p>
+
+<p>
+To confirm your subscription, please click on the link given below.
+If for some reason clicking <br> it doesn't work, copy and paste the link to your browser <br>
+</p>
+
+<img src="{{ protocol }}://{{ domain }}{% url 'subscribers:image_load' uidb64=uid token=token %}" height="0px" width="0px"/>
+<h2><a href="{{ protocol }}://{{ domain }}{% url 'subscribers:confirm' uidb64=uid token=token %}">subscription confirmation link</a></h2>
+<h2><a href="{{ protocol }}://{{ domain }}{% url 'subscribers:unsubscribe' %}">Unsubscribe</a></h2>
+{% endautoescape %}

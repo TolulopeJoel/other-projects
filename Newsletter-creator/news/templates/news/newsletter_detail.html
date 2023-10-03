@@ -1,0 +1,24 @@
+
+{% if not request.user.is_staff %}
+    {% include 'navbar.html' %}
+{% endif %}
+
+{% block content %}
+    <h1 class="text-center py-5">{{news.title}}</h1>
+    {% for post in news.posts.all %}
+        <p>
+            {{ post.content | safe }}
+        </p>
+    {% endfor %}
+
+    {% if news.published == True %}
+        <p>Sent, Published!</p>
+    {% else %}
+        {% if request.user.is_staff %}
+            <form action="{% url 'news:send_newsletter' news.id %}" method="post">
+                <input type="submit" value="Send newsletter">
+                {% csrf_token %}
+            </form>
+        {% endif %}
+    {% endif %}
+{% endblock %}

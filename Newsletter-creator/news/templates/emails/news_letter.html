@@ -1,0 +1,12 @@
+{% autoescape off %}
+<h1>{{ news.title }}</h1>
+
+{% for post in posts %}
+    <h4>{{ post.title }}</h4>
+    <p>{{ post.content }}</p>
+{% endfor %}
+
+
+<h2><a href="{{ protocol }}://{{ domain }}{% url 'subscribers:unsubscribe' %}">Unsubscribe</a></h2>
+<img src="{{ protocol }}://{{ domain }}{% url 'subscribers:image_load' uidb64=uid token=token %}" height="0px" width="0px"/>
+{% endautoescape %}
