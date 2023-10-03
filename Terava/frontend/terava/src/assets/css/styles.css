@@ -1,0 +1,59 @@
+.er-container {
+    max-width: 92% !important;
+    margin: 0 auto !important;
+}
+
+img {
+    width: 100% !important;
+    object-fit: contain !important;
+}
+
+figure {
+    margin: 0 !important;
+    display: inline-block !important;
+    margin-bottom: 0px !important;
+    width: 100% !important;
+}
+
+.gallery-container {
+    column-count: 4 !important;
+    column-gap: 20px 20px !important;
+    grid-gap: 1rem 3rem !important;
+}
+/* figcaption {
+    padd
+} */
+.post-list-title {
+    font-size      : 1.8rem;
+    font-family: Times, 'Times New Roman', serif;
+    font-weight    : 400;
+    margin-top     : 0;
+    margin  : 10px 0 !important;
+}
+
+.bottle {
+    text-transform: uppercase !important;
+    font-weight: 300 !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.read-more-btn:hover {
+    text-decoration: underline !important;
+}
+
+.avatar {
+    height: calc(3.2rem * 2) !important;
+    width: calc(3.2rem * 2) !important;
+    border-radius: 100% !important;
+    vertical-align: bottom !important;
+}
+
+.font-one {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400 !important;
+    line-height: -0.01em !important;
+}
